@@ -1,17 +1,17 @@
 // Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
 
-let arr = [10, 20, 'str', 'number', 'true', true, false, '1234', 16.4, 55];
+let arr = [];
 
-// arr[0] = 10;
-// arr[1] = 20;
-// arr[2] = 'str';
-// arr[3] = 'number';
-// arr[4] = 'true';
-// arr[5] = true;
-// arr[6] = false;
-// arr[7] = '1234';
-// arr[8] = 16.4;
-// arr[9] = 55;
+arr[0] = 10;
+arr[1] = 20;
+arr[2] = 'str';
+arr[3] = 'number';
+arr[4] = 'true';
+arr[5] = true;
+arr[6] = false;
+arr[7] = '1234';
+arr[8] = 16.4;
+arr[9] = 55;
 
 console.log(arr);
 
