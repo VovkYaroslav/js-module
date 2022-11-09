@@ -1,0 +1,12 @@
+.product-card {
+
+    display: flex;
+    justify-content: space-around;
+
+}
+
+img {
+
+    width: 200px;
+
+}
