@@ -1,12 +1,36 @@
-.product-card {
+/*.product-card {*/
 
-    display: flex;
-    justify-content: space-around;
+/*    display: flex;*/
+/*    justify-content: space-around;*/
 
-}
+/*}*/
 
-img {
+/*img {*/
 
-    width: 200px;
+/*    width: 200px;*/
 
-}
+/*}*/
+
+/*.sss {*/
+/*    margin-top: 5px;*/
+/*    width: 100px;*/
+/*    background: yellow;*/
+/*}*/
+
+
+
+
+
+/*it is CSS for additional tasks*/
+/*.wrap{*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    height: 1000px;*/
+/*    width: 1000px;*/
+/*}*/
+/*.post-card{*/
+/*    border: 4px solid blueviolet;*/
+/*    width: 200px;*/
+/*    height: 200px;*/
+/*    overflow: auto;*/
+/*}*/
