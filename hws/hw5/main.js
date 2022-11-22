@@ -89,23 +89,52 @@
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 
+// let arr = [1, true, 'str'];
+//
+// function xxx(t){
+//
+//     document.write(`<ul>`)
+//     for (const arrElement of t) {
+//         document.write(`<li>${arrElement}</li>`)
+//     }
+//     document.write(`</ul>`)
+//
+// }
+// xxx(arr)
 
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 
-
+// let users = [
+//     { id: 1, name: 'vasya', age: 31, status: true},
+//     { id: 2, name: 'petya', age: 33, status: false},
+//     { id: 3, name: 'anna', age: 28, status: true},
+//     { id: 4, name: 'olya', age: 29, status: false}
+// ];
+//
+// function xxx(ddd){
+//     document.write(`<div class='bloc'>`)
+//     for (const dddElement of ddd) {
+//
+//
+//         document.write(`<div class='ss'>${dddElement.id}---------${dddElement.name}________${dddElement.age}</div>`)
+//
+//     }
+//     document.write(`</div>`)
+// }
+// xxx(users)
 // - створити функцію яка повертає найменьше число з масиву
-
-let numbers = [1, 3, 5, 6, 8, 9, 66, 88, 0, 44, 6, 7, 8, 9, 0, -1000];
-
-let minimal = function (masiff) {
-    let min = masiff[0]
-    for (let minElement of masiff) {
-        if (minElement < min) {
-            min = minElement
-        }
-    }
-    return (min)
-}
-let minimall = minimal(numbers)
-console.log(minimall)
+//
+// let numbers = [1, 3, 5, 6, 8, 9, 66, 88, 0, 44, 6, 7, 8, 9, 0, -1000];
+//
+// let minimal = function (masiff) {
+//     let min = masiff[0]
+//     for (let minElement of masiff) {
+//         if (minElement < min) {
+//             min = minElement
+//         }
+//     }
+//     return (min)
+// }
+// let minimall = minimal(numbers)
+// console.log(minimall)
 // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13

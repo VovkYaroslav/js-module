@@ -1,0 +1,15 @@
+.bloc{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+
+    height: 200px;
+    width: max-content;
+
+    background: violet;
+}
+.ss{
+    display: flex;
+    justify-content: space-between;
+    background: yellow;
+}
