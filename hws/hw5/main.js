@@ -122,6 +122,7 @@
 //     document.write(`</div>`)
 // }
 // xxx(users)
+//
 // - створити функцію яка повертає найменьше число з масиву
 //
 // let numbers = [1, 3, 5, 6, 8, 9, 66, 88, 0, 44, 6, 7, 8, 9, 0, -1000];
@@ -138,3 +139,14 @@
 // let minimall = minimal(numbers)
 // console.log(minimall)
 // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
+
+// let arr = [1, 2, 3, 4, 5, 6, 8, 9, 0];
+//
+// function xxx(mas){
+//     let sum=0
+//     for (const ma of mas) {
+//         sum+=ma
+//     }
+//     return(sum)
+// }
+// console.log(xxx(arr))
