@@ -59,17 +59,17 @@
 // sortNums(nums,'ascending') // [3,11,21]
 // sortNums(nums,'descending') // [21,11,3]
 //
-let nums = [11, 21, 3];
-let sortNums = (direction, masiff) => {
-    if (direction === 'ascending') {
-        masiff.sort((a, b) => a - b)
-    } else if (direction === 'descending') {
-        masiff.sort((a, b) => b - a)
-    }
-    return masiff;
-}
-console.log(sortNums('descending', nums));
-console.log(sortNums('ascending', nums))
+// let nums = [11, 21, 3];
+// let sortNums = (direction, masiff) => {
+//     if (direction === 'ascending') {
+//         masiff.sort((a, b) => a - b)
+//     } else if (direction === 'descending') {
+//         masiff.sort((a, b) => b - a)
+//     }
+//     return masiff;
+// }
+// console.log(sortNums('descending', nums));
+// console.log(sortNums('ascending', nums))
 
 //
 // // - є масив
@@ -133,17 +133,17 @@ console.log(sortNums('ascending', nums))
 //     {cardSuit: 'Hearts', value: 'Ace', color: 'Red'},
 //     {cardSuit: 'Diamonds', value: 'Ace', color: 'Red'}
 // ];
-//
+
 // // - знайти піковий туз
 // let k = deck.filter((ur) => {
 //     return ur.value === 'Ase' && ur.cardSuit === 'Spade'
 // })
 // console.log(k)
 // // - всі шістки
-// let z = deck.filter((tt) => {
+// let six = deck.filter((tt) => {
 //     return tt.value === 6
 // })
-// console.log(z)
+// console.log(six)
 //
 // // - всі червоні карти
 //
@@ -162,18 +162,5 @@ console.log(sortNums('ascending', nums))
 // - всі трефи від 9 та більше
 //
 //
-// {
-//     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
-//         value: '', // '6'-'10', 'ace','jack','queen','king','joker'
-//     color:'', // 'red','black'
-// }
-//
-//
-// Додатково по reduce
-// Взяти описану колоду карт, та за допомоги редюсу попакувати всі карти по "мастях" в об'єкт
-// {
-//     spades:[],
-//         diamonds:[],
-//     hearts:[],
-//     clubs:[]
-// }
+// let filte = deck.filter(xxx => xxx.cardSuit === 'Clubs' && xxx.value >= '9' || xxx.value === 10)
+// console.log(filte)
