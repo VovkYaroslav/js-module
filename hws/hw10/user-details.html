@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details about users</title>
+</head>
+<body>
+
+
+<script>
+
+    let mainLink = new URL(location.href)
+    let id = mainLink.searchParams.get('identeficator')
+
+    fetch(`http://jsonplaceholder.typicode.com/users/${id}`)
+        .then(value => value.json())
+        .then(value => {
+            for (const item of value) {
+
+                let userDiv = document.createElement('div')
+
+                if (typeof value[item] !== 'object') {
+                    userDiv.innerText = `${item} ${value[item]}`
+                } else {
+                    userDiv.innerText = `${item}`
+
+                    for (const valueElement in value[item]) {
+                        let userInnerDiv = document.createElement('div')
+                        if (value[item][valueElement] !== 'object') {
+
+                            userInnerDiv.innerText = `${valueElement} ${value[item][valueElement]}`
+                            userDiv.append(userInnerDiv)
+                        } else {
+                            userInnerDiv.innerText = `${valueElement}`
+                            for (const key in value[item][valueElement]) {
+                                let userInnerInnerDiv = document.createElement('div')
+                                userInnerDiv.appendChild(userInnerInnerDiv)
+                            }
+                        }
+                    }
+                }
+
+            }
+        })
+
+
+</script>
+
+</body>
+</html>

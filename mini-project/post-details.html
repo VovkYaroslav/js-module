@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Post details</title>
+</head>
+<body>
+
+<!--/-->
+<script>
+    // На странице post-details.html:
+    // 7 Вивести всю, без виключення, інформацію про об'єкт post на який клікнули .
+    // 8 Нижчє інформаці про пост, вивести всі коментарі поточного поста (ендпоінт  - https://jsonplaceholder.typicode.com/posts/POST_ID/comments)
+
+    let wtf = new URL(location.href)
+    let ident =  wtf.searchParams.get('numder')
+    let listComments = document.createElement('ul')
+    document.body.appendChild(listComments)
+    fetch(`https://jsonplaceholder.typicode.com/comments/${ident}`)
+        .then(value => value.json())
+        .then(value => {
+            let welcome = document.createElement('h1')
+            welcome.innerText = `Welcome to comments about post`
+            document.body.appendChild(welcome)
+            for (const comment in value) {
+                let liss = document.createElement('li')
+                liss.innerText = `${value[comment].postId} ${comment.id} ${comment.name} ${comment.email} ${comment.body}`
+                listComments.appendChild(liss)
+            }
+    });
+</script>
+
+</body>
+</html>
