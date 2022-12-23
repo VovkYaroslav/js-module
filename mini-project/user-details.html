@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>User details</title>
+    <link rel="stylesheet" href="main-style.css">
 </head>
 <body>
 <div class="ss"></div>
@@ -20,29 +21,35 @@
     let url = new URL(location.href)
     let id = url.searchParams.get('data')
     let mainDiv = document.querySelector('.ss')
+    let mainMain = document.createElement('div')
+    mainDiv.appendChild(mainMain)
+    mainMain.className = 'mainMain'
     fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         .then(value => value.json())
         .then(userDetails => {
             for (const userDetail in userDetails) {
 
                 let userDiv = document.createElement('div')
+                userDiv.className = 'userDiv'
 
                 if (typeof userDetails[userDetail] !== 'object') {
                     userDiv.innerText = `${userDetail} ${userDetails[userDetail]}`
                 } else {
-                    userDiv.innerText = `${userDetail}`
+                    userDiv.innerText = `${userDetail}:`
 
 
                     for (const item in userDetails[userDetail]) {
                         let userInnerDiv = document.createElement('div')
+                        userInnerDiv.className = 'userInnerDiv'
 
                         if (typeof userDetails[userDetail][item] !== 'object') {
                             userInnerDiv.innerText = `${item} ${userDetails[userDetail][item]}`
                         } else {
-                            userInnerDiv.innerText = `${item}`
+                            userInnerDiv.innerText = `${item}:`
 
                             for (const xx in userDetails[userDetail][item]) {
                                 let divInDiv = document.createElement('div')
+                                divInDiv.className = 'divInDiv'
 
 
                                 if (typeof userDetails[userDetail][item][xx] !== 'object') {
@@ -52,20 +59,24 @@
                         }
                         userDiv.appendChild(userInnerDiv)
                     }
-                }mainDiv.appendChild(userDiv)
+                }mainMain.appendChild(userDiv)
             }
             let button = document.createElement('button')
-            mainDiv.appendChild(button)
+            button.className = 'bub'
+            mainMain.appendChild(button)
             let linkForPosts = document.createElement('a')
             linkForPosts.innerText = 'post of current user'
+            let boobs = document.createElement('div')
+            mainDiv.appendChild(boobs)
             fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)//
                 .then(value => value.json())
                 .then(posts => {
                     linkForPosts.onclick = function () {
                         for (const post of posts) {
                             let  divWithPosts = document.createElement('div')
+                            divWithPosts.className = 'divWithPosts'
                                 divWithPosts.innerText = `${post.id}-${post.title}---${post.body}`
-                                mainDiv.appendChild(divWithPosts)
+                                boobs.appendChild(divWithPosts)
 
 
                                 let comments = document.createElement('button')
